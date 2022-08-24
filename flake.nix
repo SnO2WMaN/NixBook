@@ -31,12 +31,11 @@
           overlays = with inputs; [
             devshell.overlay
             satyxin.overlays.default
+            satysfi-formatter-upstream.overlays.default
             satysfi-sno2wman.overlays.default
             (final: prev: {
               satysfi = satysfi-upstream.packages.${system}.satysfi;
               satysfi-language-server = satysfi-language-server-upstream.packages.${system}.satysfi-language-server;
-              satysfi-formatter = satysfi-formatter-upstream.packages.${system}.satysfi-formatter;
-              satysfi-formatter-write-each = satysfi-formatter-upstream.packages.${system}.satysfi-formatter-write-each;
               yamlfmt = yamlfmt-upstream.packages.${system}.yamlfmt;
             })
           ];
