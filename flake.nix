@@ -45,6 +45,8 @@
         packages = rec {
           satysfi-dist = pkgs.satyxin.buildSatysfiDist {
             packages = with pkgs.satyxinPackages; [
+              dist
+              class-yabaitech
               sno2wman
             ];
           };

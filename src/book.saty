@@ -1,9 +1,23 @@
-@require: stdjareport
+@require: class-yabaitech/yabaitech
 @require: sno2wman/sno2wman
 
+let colophon =
+    ColophonData.make (|
+        title = `YABAITECH.TOKYO vol.4 class file`;
+        history = [
+            `2020年10月19日 第一刷 発行`;
+        ];
+        publisher = (Option.some `yabaitech.tokyo`);
+        website = (Option.some `http://yabaitech.tokyo`);
+        email = (Option.some `admin@yabaitech.tokyo`);
+        printer = (Option.some `どこかの出版社`);
+    |)
+in
+
 document(|
-    title = { Nixについての書物 };
-    author = { \SnO2WMaN; };
-    show-title = false;
-    show-toc = false;
+    title = `Nixについての書物`;
+    volume = `0.1`;
+    date = `Feb 29th 2020`;
+    front = Option.none;
+    colophon = colophon;
 |)'<>
