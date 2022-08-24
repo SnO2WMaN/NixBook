@@ -803,6 +803,21 @@
     },
     "nix-filter_2": {
       "locked": {
+        "lastModified": 1661201956,
+        "narHash": "sha256-RizGJH/buaw9A2+fiBf9WnXYw4LZABB5kMAZIEE5/T8=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "3b821578685d661a10b563cba30b1861eec05748",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
+    "nix-filter_3": {
+      "locked": {
         "lastModified": 1659352118,
         "narHash": "sha256-X/Tdlj/PYxcQg/1hcHXxdnDr5zLO22LohIudX+oT968=",
         "owner": "numtide",
@@ -817,7 +832,7 @@
         "type": "github"
       }
     },
-    "nix-filter_3": {
+    "nix-filter_4": {
       "locked": {
         "lastModified": 1661179195,
         "narHash": "sha256-1tM5Xu5FhLPZ2JaYIyQYsE7Ixg/GgBJK4bpjONhFcD8=",
@@ -1388,14 +1403,15 @@
         "flake-compat": "flake-compat_3",
         "flake-utils": "flake-utils_6",
         "naersk": "naersk_2",
+        "nix-filter": "nix-filter_2",
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1661132538,
-        "narHash": "sha256-dsf4kzTXlIyC606JJGu0JeMiI0QZyPmhmfN5muSK26g=",
+        "lastModified": 1661376345,
+        "narHash": "sha256-0/99cjPfSvwmsuTUzxzYWWTquN+i+PexH5n9VnkcEA0=",
         "owner": "SnO2WMaN",
         "repo": "satysfi-language-server",
-        "rev": "87e6ccf8f8deafbd5b5d80e0457b299029f786d8",
+        "rev": "9f2f73c3c75b8df429b771aa502ea3d4f5d2eede",
         "type": "github"
       },
       "original": {
@@ -1455,7 +1471,7 @@
         "devshell": "devshell_6",
         "flake-compat": "flake-compat_6",
         "flake-utils": "flake-utils_12",
-        "nix-filter": "nix-filter_2",
+        "nix-filter": "nix-filter_3",
         "nixpkgs": "nixpkgs_12",
         "opam-nix": "opam-nix",
         "satysfi-external-repo": "satysfi-external-repo"
@@ -1560,7 +1576,7 @@
         "flake-compat": "flake-compat_11",
         "flake-utils": "flake-utils_21",
         "gomod2nix": "gomod2nix",
-        "nix-filter": "nix-filter_3",
+        "nix-filter": "nix-filter_4",
         "nixpkgs": "nixpkgs_23"
       },
       "locked": {
