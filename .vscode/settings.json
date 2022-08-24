@@ -1,0 +1,46 @@
+{
+  "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+  "satysfi-workshop.executable": "satysfi",
+  "satysfi-workshop.languageServer.enabled": true,
+  "satysfi-workshop.languageServer.path": "satysfi-language-server",
+  "editor.unicodeHighlight.allowedCharacters": {
+    "，": true,
+    "．": true,
+    "（": true,
+    "）": true
+  },
+  "workbench.editorAssociations": {
+    "*.pdf": "pdf.preview"
+  },
+  "customLocalFormatters.formatters": [
+    {
+      "command": "treefmt -q --stdin ${file}",
+      "languages": [
+        "json",
+        "jsonc",
+        "markdown",
+        "nix",
+        "satysfi",
+        "toml"
+      ]
+    }
+  ],
+  "[toml]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[nix]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[satysfi]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+}

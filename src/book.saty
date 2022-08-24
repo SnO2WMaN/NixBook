@@ -1,0 +1,9 @@
+@require: stdjareport
+@require: sno2wman/sno2wman
+
+document(|
+    title = { Nixについての書物 };
+    author = { \SnO2WMaN; };
+    show-title = false;
+    show-toc = false;
+|)'<>

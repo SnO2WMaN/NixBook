@@ -1,0 +1,8 @@
+# Nix
+.direnv
+result
+
+# SATySFi
+.satysfi/dist
+*.satysfi-aux
+*.pdf
