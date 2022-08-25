@@ -3,11 +3,15 @@
   "satysfi-workshop.executable": "satysfi",
   "satysfi-workshop.languageServer.enabled": true,
   "satysfi-workshop.languageServer.path": "satysfi-language-server",
+  // "satysfi-workshop.build.when": "onSave",
+  "satysfi-workshop.build.rootFile": "src/book.saty",
   "editor.unicodeHighlight.allowedCharacters": {
     "，": true,
     "．": true,
     "（": true,
-    "）": true
+    "）": true,
+    "！": true,
+    "？": true
   },
   "workbench.editorAssociations": {
     "*.pdf": "pdf.preview"
@@ -42,5 +46,5 @@
   },
   "[satysfi]": {
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
-  },
+  }
 }
