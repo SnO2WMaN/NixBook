@@ -1,23 +1,42 @@
 @require: class-yabaitech/yabaitech
 @require: sno2wman/sno2wman
+@import: ./build_satysfi_doc/chapter
+@import: ./first_package/chapter
+@import: ./flake/chapter
+@import: ./home_manager/chapter
+@import: ./install/chapter
+@import: ./intro/chapter
+@import: ./nix_expression/chapter
+@import: ./nixos/chapter
+@import: ./second_package/chapter
+@import: ./server_with_nixos/chapter
 
 let colophon =
     ColophonData.make (|
-        title = `YABAITECH.TOKYO vol.4 class file`;
-        history = [
-            `2020年10月19日 第一刷 発行`;
-        ];
-        publisher = (Option.some `yabaitech.tokyo`);
-        website = (Option.some `http://yabaitech.tokyo`);
-        email = (Option.some `admin@yabaitech.tokyo`);
-        printer = (Option.some `どこかの出版社`);
+        title = `Nixについての本 Ver.1`;
+        history = [`2022年`;];
+        publisher = (Option.some `SnO2WMaN`);
+        website = (Option.some `https://github.com/SnO2WMaN/NixBook`);
+        email = (Option.none);
+        printer = (Option.none);
     |)
 in
 
 document(|
-    title = `Nixについての書物`;
-    volume = `0.1`;
-    date = `Feb 29th 2020`;
+    title = `Nixについての本`;
+    volume = `Ver.1`;
+    date = `2022 ~`;
     front = Option.none;
     colophon = colophon;
-|)'<>
+|)'<
+    #ChapterNixIntro.chapter;
+    #ChapterInstallNix.chapter;
+    #ChapterNixExpression.chapter;
+    #ChapterNixFlake.chapter;
+    #ChapterFirstPackage.chapter;
+    #ChapterSecondPackage.chapter;
+    #ChapterHomeManager.chapter;
+    #ChapterNixOS.chapter;
+    #ChapterNixOSServer.chapter;
+    #ChapterBuildSATySFiDoc.chapter;
+>

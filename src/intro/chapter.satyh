@@ -1,0 +1,99 @@
+@require: base/list-ext
+@require: base/option-ext
+@require: class-yabaitech/yabaitech
+@require: sno2wman/sno2wman
+
+module ChapterNixIntro: sig
+    val chapter: block-text
+end = struct
+    let bib =
+        [
+            (`nixos_org`, WebSite(|
+                author = {
+                |NixOS|};
+                title = { NixOS };
+                url = `https://nixos.org/`;
+                year = 2022;
+            |));
+            (`archwiki_aur`, WebSite(|
+                author = {
+                |ArchWiki（日本語版）|};
+                title = { Arch User Repository };
+                url = `https://wiki.archlinux.jp/index.php/Arch_User_Repository`;
+                year = 2019;
+            |));
+            (`satysfi_github`, WebSite(|
+                author = {
+                |bf_gfngfn|};
+                title = { \SATySFi; };
+                url = `https://github.com/gfngfn/SATySFi`;
+                year = 2022;
+            |));
+            (`satyrographos_github`, WebSite(|
+                author = {
+                |na4zagin3|};
+                title = { satyrographos };
+                url = `https://github.com/na4zagin3/satyrographos`;
+                year = 2022;
+            |));
+        ]
+
+    let chapter = '<
+        +chapter ?:(`nix_intro`) ((|
+            bibliography = bib;
+            title = { はじめに };
+            subtitle = Option.some { Nixとは？ };
+            title-for-toc = Option.none;
+            author = { \SnO2WMaN; };
+        |))<
+            +p{
+                この章では，Nixとは何か，どういったことが出来るのか，何が嬉しいのか，などを解説します．
+            }
+            +section{ パッケージマネージャとしてのNix }<
+                +p{
+                    まずはじめに，Nixとはパッケージマネージャの一つです．特徴として「純粋関数型パッケージマネージャ」という点を謳っています．
+                }
+            >
+            +section{ NixOS }<
+                +p{
+                    皆さんも一度は使ったことがあるであろう，よく知られているLinuxディストリビューションであるUbuntuやArch Linuxには，
+                    それぞれaptや
+                    AUR\cite [
+                        `archwiki_aur`;
+                    ];
+                    といったパッケージマネージャが付属しています．
+                    利用者はこれらのパッケージマネージャから様々なパッケージ，ライブラリ，ソフトウェアなどをインストールします．
+                    これと同じように，
+                    はじめからNixをパッケージマネージャとするLinuxディストリビューションが提供されており，これをNixOSと呼びます．
+                    ただし，単にパッケージマネージャがNixであるというだけでなく，主にサーバ管理などの観点からの様々な利点も存在します．
+                    とはいえ，もちろん普段使いにもすることも出来ます．
+                    この点については，\ref-chapter (`nixos`);で解説します．
+                }
+            >
+            +section{ 設定記述用言語としてのNix }<
+                +p{
+                    パッケージマネージャであるNixに対して様々な設定を記述するための言語もNixと呼ばれることがありますが，
+                    本書では混乱を避けるため，Nix言語，あるいはNix Expressionなどと表記します．
+                    Nix言語についての記法などは，\ref-chapter (`nix_expression`);で解説します．
+                }
+            >
+            +section{ その他の話題 }<
+                +p{
+                    この文書は新しい組版システムである，
+                    \SATySFi;
+                    \cite [
+                        `satysfi_github`;
+                    ];
+                    によって記述されています．
+                    ほとんどのケースでは\SATySFi;はパッケージ管理にSatyrogrphos
+                    \cite [
+                        `satyrographos_github`;
+                    ];
+                    という外部ツールを使うのですが，
+                    今回，著者によってそれらをNixで管理することを試みています．
+                    この試みについては，\ref-chapter (`build_satysfi_doc`);で解説しています．
+                }
+            >
+        >
+    >
+end

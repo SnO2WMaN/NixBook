@@ -1,0 +1,22 @@
+@require: base/list-ext
+@require: base/option-ext
+@require: class-yabaitech/yabaitech
+@require: sno2wman/sno2wman
+
+module ChapterFirstPackage: sig
+    val chapter: block-text
+end = struct
+    let bib = []
+
+    let chapter = '<
+        +chapter ?:(`first_package`) ((|
+            bibliography = bib;
+            title = { 最初のNixパッケージを作ろう };
+            subtitle = Option.none;
+            title-for-toc = Option.none;
+            author = { \SnO2WMaN; };
+        |))<
+            +p{ この章では，Nixで初めてのパッケージを作ってみます． }
+        >
+    >
+end
